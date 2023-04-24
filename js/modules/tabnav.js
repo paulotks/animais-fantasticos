@@ -7,7 +7,7 @@ export default class TabNav {
 
   // ativa a tab de acordo com o index da mesma
   activeTab(index) {
-    this.this.tabContent.forEach((section) => {
+    this.tabContent.forEach((section) => {
       section.classList.remove(this.activeClass);
     });
     const direcao = this.tabContent[index].dataset.anime;
@@ -27,5 +27,6 @@ export default class TabNav {
       this.activeTab(0);
       this.addTabNavEvent();
     }
+    return this;
   }
 }
